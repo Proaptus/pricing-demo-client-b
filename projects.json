@@ -1,0 +1,207 @@
+{
+  "simpson-travel-kb": {
+    "id": "simpson-travel-kb",
+    "name": "HubSpot AI Knowledge Base",
+    "description": "",
+    "background": "",
+    "clientName": "Simpson Travel",
+    "overview": "AI-powered knowledge base with HubSpot integration, semantic search, and LLM-powered query responses",
+    "startDate": "2025-01-15",
+    "endDate": "2025-03-31",
+    "projectCode": "ST-KB-2025-Q1",
+    "accountManager": "Colin (RPG)",
+    "accountManagerParty": "RPG",
+    "status": "Active",
+    "clientRate": 950,
+    "soldDays": 45,
+    "deliverables": [
+      {
+        "id": 1,
+        "name": "Architecture & System Design",
+        "owner": "Proaptus",
+        "role": "Solution Architect",
+        "days": 2.5,
+        "acceptanceCriteria": "System architecture documented with Azure, API boundaries, security model defined"
+      },
+      {
+        "id": 3,
+        "name": "OneNote (Microsoft Graph) Integration",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 2,
+        "acceptanceCriteria": "OAuth app registered, Graph API integration functional with delta sync"
+      },
+      {
+        "id": 4,
+        "name": "Website Content Extraction",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 2,
+        "acceptanceCriteria": "API-based ingestion built, auth/rate limits handled, HTML→text conversion working"
+      },
+      {
+        "id": 5,
+        "name": "Content Processing Pipeline",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 2,
+        "acceptanceCriteria": "Parsing, chunking, metadata enrichment, inconsistency detection implemented"
+      },
+      {
+        "id": 6,
+        "name": "Search Infrastructure",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 1.5,
+        "acceptanceCriteria": "Hybrid search (BM25 + vector) configured with semantic search enabled"
+      },
+      {
+        "id": 7,
+        "name": "Query Processing Engine",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 2,
+        "acceptanceCriteria": "Stage-1 LLM: intent detection, retrieval plan, query rewriting functional"
+      },
+      {
+        "id": 8,
+        "name": "LLM Integration",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 2,
+        "acceptanceCriteria": "Stage-2 LLM: answer synthesis with guardrails and prompt injection defenses"
+      },
+      {
+        "id": 9,
+        "name": "Citation System",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 1,
+        "acceptanceCriteria": "Verifiable citations implemented with client-specific templates"
+      },
+      {
+        "id": 10,
+        "name": "API Development",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 1.5,
+        "acceptanceCriteria": "REST API with auth, rate limiting, health checks, ingestion endpoints ready"
+      },
+      {
+        "id": 14,
+        "name": "Performance Optimization",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 1,
+        "acceptanceCriteria": "Query response times <2s p50, search parameters tuned, caching optimized"
+      },
+      {
+        "id": 15,
+        "name": "Technical Documentation",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 1,
+        "acceptanceCriteria": "Technical docs, runbooks, API documentation, ops quick-start guide complete"
+      },
+      {
+        "id": 12,
+        "name": "HubSpot UI Development",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 3,
+        "acceptanceCriteria": "Native HubSpot UI built with HS components, response times <15s"
+      },
+      {
+        "id": 2,
+        "name": "Azure Infrastructure Setup",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 0.5,
+        "acceptanceCriteria": "Azure resources configured"
+      },
+      {
+        "id": 100,
+        "name": "HubSpot UI Phase-1",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 0.25,
+        "acceptanceCriteria": "Iframe embed coordination"
+      },
+      {
+        "id": 101,
+        "name": "Integration Testing",
+        "owner": "Proaptus",
+        "role": "QA",
+        "days": 2,
+        "acceptanceCriteria": "Test automation and QA complete"
+      },
+      {
+        "id": 102,
+        "name": "Security Hardening",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 1,
+        "acceptanceCriteria": "Security implementation and testing"
+      },
+      {
+        "id": 103,
+        "name": "Monitoring & Alerting",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 0.75,
+        "acceptanceCriteria": "Monitoring setup complete"
+      },
+      {
+        "id": 104,
+        "name": "Knowledge Transfer & Handover",
+        "owner": "Proaptus",
+        "role": "Development",
+        "days": 0.75,
+        "acceptanceCriteria": "Technical handover and documentation"
+      },
+      {
+        "id": 17,
+        "name": "Solution Architecture & Discovery",
+        "owner": "RPG",
+        "role": "Solution Architect",
+        "days": 5,
+        "acceptanceCriteria": "Solution design documented and approved by client"
+      },
+      {
+        "id": 18,
+        "name": "Project Management",
+        "owner": "RPG",
+        "role": "Project Management",
+        "days": 5,
+        "acceptanceCriteria": "Project milestones tracked, status reports delivered weekly"
+      },
+      {
+        "id": 105,
+        "name": "Client Enablement Workshop",
+        "owner": "RPG",
+        "role": "Development",
+        "days": 8,
+        "acceptanceCriteria": "Client team trained on workflows, documentation, and enablement assets handed over"
+      }
+    ],
+    "lastModified": "2025-10-31T11:56:48.076Z"
+  },
+  "4288ebd8-6103-4990-bfb5-6bda2651e577": {
+    "id": "4288ebd8-6103-4990-bfb5-6bda2651e577",
+    "name": "Test Project",
+    "description": "",
+    "background": "",
+    "clientName": "",
+    "overview": "",
+    "startDate": "",
+    "endDate": "",
+    "projectCode": "",
+    "accountManager": "",
+    "accountManagerParty": "RPG",
+    "status": "Active",
+    "clientRate": 950,
+    "soldDays": 45,
+    "deliverables": [],
+    "lastModified": "2025-10-31T11:25:15.010Z"
+  }
+}

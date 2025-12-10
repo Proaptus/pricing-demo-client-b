@@ -1,0 +1,248 @@
+{
+  "id": "hubspot-knowledge-system",
+  "projectName": "HubSpot Knowledge System",
+  "clientName": "Red Pegasus Group",
+  "overview": "AI-powered knowledge system integrating OneNote, website content, and property data with HubSpot. Hybrid search with LLM-powered query processing and verifiable citations.",
+  "startDate": "2025-11-03",
+  "endDate": "2025-12-20",
+  "projectCode": "RPG-KS-2025",
+  "accountManager": "TBD",
+  "accountManagerParty": "RPG",
+  "status": "Proposal",
+  "clientRate": 800,
+  "soldDays": 55.5,
+  "deliverables": [
+    {
+      "id": 1,
+      "name": "Architecture & System Design",
+      "owner": "RPG",
+      "role": "Solution Architect",
+      "days": 2.0,
+      "acceptanceCriteria": "Define system components, integration points, and security model.\n✓ Complete system architecture diagram\n✓ Integration point specifications\n✓ Security model documentation\n✓ Scalability considerations documented"
+    },
+    {
+      "id": 2,
+      "name": "Azure Infrastructure Setup",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.0,
+      "acceptanceCriteria": "Configure cloud resources, networking, and security policies.\n✓ Azure resources provisioned\n✓ Network security configured\n✓ IAM policies implemented\n✓ Environment configurations ready"
+    },
+    {
+      "id": 3,
+      "name": "OneNote (Microsoft Graph) Integration",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Implement secure notebook/page sync via Graph API.\n✓ OAuth authentication working\n✓ Notebook enumeration functional\n✓ Page content extraction verified\n✓ Incremental sync implemented"
+    },
+    {
+      "id": 4,
+      "name": "Website Content Extraction (API/Umbraco)",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Build API-based ingestion for website/Umbraco content.\n✓ Umbraco API integration complete\n✓ Content parsing validated\n✓ Metadata extraction working\n✓ Change detection implemented"
+    },
+    {
+      "id": 5,
+      "name": "Content Processing Pipeline",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Parsing, chunking, metadata enrichment & validation.\n✓ Document chunking strategy validated\n✓ Metadata enrichment pipeline working\n✓ Quality validation checks passing\n✓ Error handling robust"
+    },
+    {
+      "id": 6,
+      "name": "Search Infrastructure",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.5,
+      "acceptanceCriteria": "Configure hybrid search (BM25 + vector) & filters.\n✓ Azure Cognitive Search configured\n✓ BM25 keyword search working\n✓ Vector embeddings indexed\n✓ Filter queries validated"
+    },
+    {
+      "id": 7,
+      "name": "Query Processing Engine",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Stage-1 LLM: intent detection & retrieval plan.\n✓ Query intent classification working\n✓ Retrieval strategy selection functional\n✓ Query expansion implemented\n✓ Multi-turn context handling verified"
+    },
+    {
+      "id": 8,
+      "name": "LLM Integration",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Stage-2 LLM: answer synthesis with guardrails.\n✓ Azure OpenAI integration complete\n✓ Answer generation working\n✓ Hallucination guardrails active\n✓ Response quality validated"
+    },
+    {
+      "id": 9,
+      "name": "Citation System",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.0,
+      "acceptanceCriteria": "Verifiable citations per answer (per-client templates).\n✓ Source tracking implemented\n✓ Citation formatting working\n✓ Deep links functional\n✓ Template system flexible"
+    },
+    {
+      "id": 10,
+      "name": "API Development",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.5,
+      "acceptanceCriteria": "REST API with auth & rate limiting.\n✓ RESTful endpoints documented\n✓ API authentication working\n✓ Rate limiting configured\n✓ Error responses standardized"
+    },
+    {
+      "id": 11,
+      "name": "HubSpot UI Component (Phase-1)",
+      "owner": "RPG",
+      "role": "Project Manager",
+      "days": 0.5,
+      "acceptanceCriteria": "Embed existing React app in HubSpot via iframe.\n✓ iframe integration working\n✓ Cross-origin communication secure\n✓ Basic styling matches HubSpot\n✓ Load times acceptable"
+    },
+    {
+      "id": 12,
+      "name": "HubSpot UI Component (Phase-2)",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 3.0,
+      "acceptanceCriteria": "Build HubSpot Native Frontend for the Application.\n✓ HubSpot UI Extensions implemented\n✓ Native component styling complete\n✓ User workflows validated\n✓ Mobile responsiveness verified"
+    },
+    {
+      "id": 13,
+      "name": "Integration Testing",
+      "owner": "Proaptus",
+      "role": "QA",
+      "days": 1.5,
+      "acceptanceCriteria": "End-to-end tests with real data scenarios.\n✓ Test scenarios documented\n✓ Integration tests passing\n✓ Edge cases covered\n✓ Performance benchmarks met"
+    },
+    {
+      "id": 14,
+      "name": "Performance Optimization",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.0,
+      "acceptanceCriteria": "Ensure ~sub-2s p50 response times.\n✓ Response times under 2s (p50)\n✓ Caching strategy implemented\n✓ Query optimization complete\n✓ Load testing passed"
+    },
+    {
+      "id": 15,
+      "name": "Documentation (Technical + Ops)",
+      "owner": "RPG",
+      "role": "Project Manager",
+      "days": 0.5,
+      "acceptanceCriteria": "Provide technical docs and runbooks.\n✓ Technical architecture documented\n✓ API documentation complete\n✓ Operations runbooks created\n✓ Troubleshooting guides available"
+    },
+    {
+      "id": 16,
+      "name": "Property Data Integration",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 0.5,
+      "acceptanceCriteria": "Extend system to handle property-specific metadata.\n✓ Property schema defined\n✓ Metadata ingestion working\n✓ Property search filters active\n✓ Data validation passing"
+    },
+    {
+      "id": 17,
+      "name": "Availability System Connection",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Integrate with booking/availability data sources.\n✓ Availability API integration complete\n✓ Real-time sync working\n✓ Booking status accurate\n✓ Calendar integration functional"
+    },
+    {
+      "id": 18,
+      "name": "Advanced Search Features",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.5,
+      "acceptanceCriteria": "Enable multi-criteria filtering for property matching.\n✓ Multi-faceted search working\n✓ Filter combinations tested\n✓ Result ranking validated\n✓ Search UI responsive"
+    },
+    {
+      "id": 19,
+      "name": "Recommendation Engine",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.0,
+      "acceptanceCriteria": "Build scoring algorithm for property suggestions.\n✓ Recommendation logic implemented\n✓ Scoring algorithm tuned\n✓ Personalization working\n✓ Results quality validated"
+    },
+    {
+      "id": 20,
+      "name": "Response Generation",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Develop brand-aligned template system for sales responses.\n✓ Template system flexible\n✓ Brand voice consistent\n✓ Dynamic content insertion working\n✓ Multi-format support validated"
+    },
+    {
+      "id": 21,
+      "name": "Sales UI Component",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.0,
+      "acceptanceCriteria": "Create a specialised interface for sales team workflows.\n✓ Sales dashboard functional\n✓ Lead tracking integrated\n✓ Quick actions accessible\n✓ User training completed"
+    },
+    {
+      "id": 22,
+      "name": "Sales-Specific Testing",
+      "owner": "Proaptus",
+      "role": "QA",
+      "days": 1.5,
+      "acceptanceCriteria": "Validate functionality with real enquiry scenarios.\n✓ Sales workflows tested\n✓ Enquiry handling validated\n✓ Response accuracy verified\n✓ User acceptance obtained"
+    },
+    {
+      "id": 23,
+      "name": "Security Hardening",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 2.0,
+      "acceptanceCriteria": "Ensure OWASP compliance and implement vulnerability prevention measures.\n✓ OWASP Top 10 addressed\n✓ Penetration testing passed\n✓ Security audit complete\n✓ Vulnerability scan clean"
+    },
+    {
+      "id": 24,
+      "name": "Monitoring Setup",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.5,
+      "acceptanceCriteria": "Configure logging, metrics, and alerting systems.\n✓ Application logging configured\n✓ Metrics dashboards created\n✓ Alert rules defined\n✓ Incident response tested"
+    },
+    {
+      "id": 25,
+      "name": "Deployment Pipeline",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.5,
+      "acceptanceCriteria": "Set up automated deployment and rollback procedures.\n✓ CI/CD pipeline working\n✓ Automated testing integrated\n✓ Rollback procedures tested\n✓ Deployment documentation complete"
+    },
+    {
+      "id": 26,
+      "name": "Knowledge Transfer",
+      "owner": "RPG",
+      "role": "Solution Architect",
+      "days": 1.0,
+      "acceptanceCriteria": "Conduct documentation and handover sessions with internal teams.\n✓ Knowledge transfer sessions completed\n✓ Documentation reviewed\n✓ Q&A sessions held\n✓ Team sign-off obtained"
+    },
+    {
+      "id": 27,
+      "name": "Initial Data Load",
+      "owner": "Proaptus",
+      "role": "Development",
+      "days": 1.5,
+      "acceptanceCriteria": "Perform first-time ingestion of data and validate integrity.\n✓ Historical data migrated\n✓ Data integrity verified\n✓ Search index built\n✓ Validation reports clean"
+    },
+    {
+      "id": 28,
+      "name": "Project Management & Coordination",
+      "owner": "RPG",
+      "role": "Project Manager",
+      "days": 10.0,
+      "acceptanceCriteria": "Overall project coordination, stakeholder management, and delivery oversight.\n✓ Weekly status reports delivered\n✓ Stakeholder meetings conducted\n✓ Risk mitigation plans active\n✓ Budget tracking maintained\n✓ Timeline adherence monitored"
+    },
+    {
+      "id": 29,
+      "name": "Account Management",
+      "owner": "RPG",
+      "role": "Account Manager",
+      "days": 2.0,
+      "acceptanceCriteria": "Client relationship management and commercial oversight.\n✓ Client satisfaction maintained\n✓ Commercial terms managed\n✓ Escalations handled\n✓ Future opportunities identified"
+    }
+  ]
+}

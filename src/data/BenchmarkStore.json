@@ -1,0 +1,306 @@
+{
+  "meta": {
+    "currency": "GBP",
+    "region": "UK South",
+    "fx_rate_usd_gbp": 0.82,
+    "fx_source": "ECB - Oct 2025",
+    "last_updated": "2025-10-21",
+    "created_date": "2025-10-21",
+    "version": "1.0",
+    "confidenceScale": "High (vendor official / regulatory filing), Medium (third-party verified), Low (marketing claim / forum post)"
+  },
+
+  "azure_pricing": {
+    "ai_document_intelligence": {
+      "read_per_1k_pages_usd": 1.50,
+      "read_per_1k_pages_gbp": 1.23,
+      "prebuilt_per_1k_pages_usd": 10.00,
+      "prebuilt_per_1k_pages_gbp": 8.20,
+      "custom_extract_per_1k_pages_usd": 50.00,
+      "custom_extract_per_1k_pages_gbp": 41.00,
+      "source": "Microsoft Learn - Azure AI Document Intelligence Pricing",
+      "source_url": "https://learn.microsoft.com/en-us/answers/questions/1512278/whats-the-pricing-for-reading-an-engineering-spec",
+      "date_accessed": "2025-10-21",
+      "confidence": "High",
+      "notes": "Official Microsoft pricing. Read is cheapest for OCR; Prebuilt for standard document types; Custom for domain-specific. We use Read for leases + LLM extraction (cheaper than Custom extraction).",
+      "calculation": "1.50 USD × 0.82 = 1.23 GBP"
+    },
+    "ai_search_cognitive_search": {
+      "s1_per_hour_usd": 0.336,
+      "s1_per_month_usd": 245.28,
+      "s1_per_month_gbp": 200.93,
+      "s2_per_hour_usd": 1.676,
+      "s2_per_month_usd": 1223.68,
+      "s2_per_month_gbp": 1003.42,
+      "billing_model": "Flat hourly rate per unit; 730 hours/month assumed",
+      "source": "TrustRadius - Azure AI Search Pricing 2025",
+      "source_url": "https://www.trustradius.com/products/azure-ai-search/pricing",
+      "date_accessed": "2025-10-21",
+      "confidence": "Medium",
+      "notes": "Third-party verified rates. Official Azure page does not display static prices on-page (dynamic pricing). S1 suitable for 1,000-site baseline; can scale to S2/S3 if needed.",
+      "calculation": "0.336 USD/hr × 730 hrs × 0.82 = £200.93/month"
+    },
+    "blob_storage_hot_tier": {
+      "uk_south_gbp_per_gb_month": 0.0142,
+      "uk_south_usd_per_gb_month": 0.0173,
+      "us_east_usd_per_gb_month": 0.018,
+      "source_uk": "Synextra - Azure Blob Storage Pricing Guide 2025",
+      "source_uk_url": "https://www.synextra.co.uk/knowledge-base/azure-blob-storage-pricing/",
+      "source_us": "N2WS Backup & Recovery - Azure Storage Pricing 2025",
+      "source_us_url": "https://www.n2ws.com/blog/azure-storage-pricing",
+      "date_accessed": "2025-10-21",
+      "confidence": "Medium",
+      "notes": "UK pricing from Synextra (UK-specific data). US pricing from N2WS (common US reference). Hot tier used for active data; Cool tier available for archive at ~60% discount.",
+      "regional_variance": "UK rates slightly lower than US due to regional pricing; always verify with live Azure Retail Prices API."
+    }
+  },
+
+  "llm_pricing": {
+    "gpt_4o_mini": {
+      "input_tokens_per_1m_usd": 0.15,
+      "input_tokens_per_1m_gbp": 0.123,
+      "output_tokens_per_1m_usd": 0.60,
+      "output_tokens_per_1m_gbp": 0.492,
+      "source": "Reuters - OpenAI Unveils Cheaper Small AI Model GPT-4o Mini (2024-07-18)",
+      "source_url": "https://www.reuters.com/technology/artificial-intelligence/openai-unveils-cheaper-small-ai-model-gpt-4o-mini-2024-07-18/",
+      "date_published": "2024-07-18",
+      "confidence": "High",
+      "notes": "Lowest-cost OpenAI model with high performance for extraction. Typical input:output ratio for extraction ~10:1 (input tokens for prompt + document, output for extracted fields). Assume ~10% of input tokens as output.",
+      "example_cost_1000_sites": "101.25M input tokens × £0.123 = £12.45; ~10.1M output × £0.492 = £4.97; TOTAL ≈ £17.42 for extraction"
+    },
+    "gpt_4_turbo": {
+      "input_tokens_per_1m_usd": 3.00,
+      "input_tokens_per_1m_gbp": 2.46,
+      "output_tokens_per_1m_usd": 12.00,
+      "output_tokens_per_1m_gbp": 9.84,
+      "source": "OpenAI API Pricing - Official",
+      "source_url": "https://openai.com/api/pricing/",
+      "date_accessed": "2025-10-21",
+      "confidence": "High",
+      "notes": "Higher-cost model for sensitivity testing. 20× more expensive than 4o-mini; used as upper-bound scenario only."
+    }
+  },
+
+  "manual_abstraction_services": {
+    "range_low_per_lease_usd": 100,
+    "range_low_per_lease_gbp": 82,
+    "range_high_per_lease_usd": 4000,
+    "range_high_per_lease_gbp": 3280,
+    "hours_per_lease": "4-8",
+    "implied_rate_low": "£20.50/hour (at 4 hrs)",
+    "implied_rate_high": "£82/hour (at 4 hrs)",
+    "sources": [
+      {
+        "name": "GrowthFactor - AI-Powered Lease Abstraction ROI",
+        "url": "https://www.growthfactor.ai/blog-posts/ai-powered-lease-abstraction",
+        "date": "2025",
+        "confidence": "Medium",
+        "excerpt": "Manual lease abstraction typically costs $100-$4,000 per lease depending on complexity and vendor."
+      },
+      {
+        "name": "LeaseLens - What is Lease Abstraction?",
+        "url": "https://leaselens.ai/what-is-lease-abstraction/",
+        "date": "2025",
+        "confidence": "Medium",
+        "excerpt": "Manual services quote 'hundreds of dollars per lease' for 4-8 hours of professional time."
+      },
+      {
+        "name": "Kolena - ROI of AI Powered Lease Abstraction in CRE",
+        "url": "https://www.kolena.com/blog/roi-of-ai-powered-lease-abstraction-in-cre/",
+        "date": "2025",
+        "confidence": "Medium",
+        "excerpt": "Manual abstraction labor: ~£30/hour (US admin) × 4-8 hours = $120-$240 per lease baseline."
+      }
+    ],
+    "notes": "Range reflects complexity (simple standard leases at low end; complex leases with multiple amendments at high end). Baseline for 1,000-site comparison assumes mid-point for 'typical' leases.",
+    "1000_site_total_low_gbp": 615000,
+    "1000_site_total_high_gbp": 2460000,
+    "1000_site_total_mid_gbp": 1537500
+  },
+
+  "ai_saas_per_lease_pricing": [
+    {
+      "vendor": "LeaseLens",
+      "per_lease_usd": 25,
+      "per_lease_gbp": 20.50,
+      "pricing_model": "Pay-per-export",
+      "scope": "Free preview; pay to export extracted data",
+      "fields_claimed": "Varies by document; no specific count published",
+      "source": "LeaseLens Pricing Page",
+      "source_url": "https://leaselens.ai/",
+      "date_accessed": "2025-10-21",
+      "confidence": "High",
+      "notes": "Lowest cost per-lease SaaS option. Export-based pricing; full solution cost depends on volume and SLA.",
+      "what_not_included": "SSO/MFA, audit logs, governed APIs, Digital Twin integration, ingestion automation from ERPs"
+    },
+    {
+      "vendor": "LeaseAbstract AI",
+      "per_lease_usd": 95,
+      "per_lease_gbp": 77.90,
+      "pricing_model": "Per-lease tiered (higher volume = lower rate)",
+      "scope": "Advertised as 180+ fields; includes clause extraction",
+      "fields_claimed": "180+ Appendix-1-equivalent fields",
+      "source": "LeaseAbstract AI Pricing Page",
+      "source_url": "https://leaseabstractai.com/pricing",
+      "date_accessed": "2025-10-21",
+      "confidence": "Medium",
+      "notes": "Mid-tier per-lease vendor. Marketing claims 180+ fields; requires verification against Cornerstone Appendix-1 scope.",
+      "what_not_included": "SSO/MFA, audit logs, governed APIs, Digital Twin integration, multi-tenant deployment, ingestion automation"
+    },
+    {
+      "vendor": "LeaseAbstract AI (Limited Tier)",
+      "per_lease_usd": 3,
+      "per_lease_gbp": 2.46,
+      "pricing_model": "Entry-level tier",
+      "scope": "Limited feature set; not comparable to full platform",
+      "fields_claimed": "Unknown; significantly fewer than advertised 180+",
+      "source": "LeaseAbstract AI Website",
+      "source_url": "https://www.leaseabstractai.com/leaseabstractai-vs-leasecake",
+      "date_accessed": "2025-10-21",
+      "confidence": "Low",
+      "notes": "Advertised extremely low tier; likely limited features, not a like-for-like comparator. Used only for sensitivity lower-bound."
+    }
+  ],
+
+  "uk_contractor_day_rates": {
+    "source": "IT Jobs Watch - UK Contract Job Trends",
+    "source_url": "https://www.itjobswatch.co.uk/",
+    "date": "October 2025",
+    "currency": "GBP",
+    "confidence": "High",
+    "notes": "Represents current UK contract market rates. Our blended rates align well with these benchmarks, validating our hybrid model (60% internal, 40% contractor).",
+    "roles": [
+      {
+        "title": "Software Engineer",
+        "median_day_rate_gbp": 600,
+        "percentile_25_gbp": 480,
+        "percentile_75_gbp": 720,
+        "source_url": "https://www.itjobswatch.co.uk/contracts/uk/software%20engineer.do"
+      },
+      {
+        "title": "Data Engineer",
+        "median_day_rate_gbp": 500,
+        "percentile_25_gbp": 400,
+        "percentile_75_gbp": 650,
+        "source_url": "https://www.itjobswatch.co.uk/contracts/uk/data%20engineer.do"
+      },
+      {
+        "title": "ML Engineer",
+        "median_day_rate_gbp": 575,
+        "percentile_25_gbp": 450,
+        "percentile_75_gbp": 725,
+        "source_url": "https://www.itjobswatch.co.uk/contracts/uk/"
+      },
+      {
+        "title": "Backend Engineer",
+        "median_day_rate_gbp": 550,
+        "percentile_25_gbp": 430,
+        "percentile_75_gbp": 700,
+        "source_url": "https://www.itjobswatch.co.uk/contracts/uk/"
+      },
+      {
+        "title": "Project Manager",
+        "median_day_rate_gbp": 525,
+        "percentile_25_gbp": 420,
+        "percentile_75_gbp": 650,
+        "source_url": "https://www.itjobswatch.co.uk/contracts/uk/project%20manager.do"
+      }
+    ],
+    "interpretation": "Our blended rates (60% internal staff, 40% contractor) land in the 25th-50th percentile—conservative but market-conformant. This validates our cost model against external market benchmarks."
+  },
+
+  "cornerstone_ai_model_baseline": {
+    "unit": "1,000 sites",
+    "scenario": "Standard (Hybrid team)",
+    "docs_per_site": 7.5,
+    "total_documents": 7500,
+    "pages_per_doc": 18,
+    "total_pages": 135000,
+    "capex_one_time_cost_gbp": 100000,
+    "capex_one_time_price_gbp": 197768,
+    "opex_monthly_cost_gbp": 2610.71,
+    "opex_monthly_price_gbp": 3002.32,
+    "opex_annual_cost_gbp": 31328.52,
+    "opex_annual_price_gbp": 36027.84,
+    "total_quote_cost_gbp": 131328.52,
+    "total_quote_price_gbp": 233795.84,
+    "gross_margin_pct": 43.8,
+    "gross_margin_target_pct": 60,
+    "margin_variance_pct": -16.2,
+    "source": "Cornerstone Pricing Model - Standard Scenario (Oct 2025)",
+    "notes": "Baseline calculation with Likely case assumptions (50/35/15 quality mix, 20 min review). Machine costs (OCR + LLM) = £184 (~0.14% of total cost). Build engineering and manual review are the cost drivers."
+  },
+
+  "assumptions_backing": {
+    "ingestion_costs": {
+      "ocr_read_model": {
+        "assumption": "Azure Read @ £1.23/1k pages",
+        "backing": "Microsoft Learn official pricing; cheapest option for legible documents. Prebuilt (£8.20/1k) and Custom (£41/1k) are 6–33× more expensive; only justified for highly specialized forms.",
+        "sensitivity": "If switched to Custom extraction: ≈ £5,535 instead of £166 (33× increase); still <1% of total cost."
+      },
+      "llm_model": {
+        "assumption": "GPT-4o-mini @ £0.12/1M input tokens",
+        "backing": "Reuters 2024-07-18 + OpenAI official. 4o-mini is purpose-built for high-volume, low-latency extraction. Assumes 750 tokens/page × 1 pipeline pass × 101.25M tokens = £12.15.",
+        "sensitivity": "If switched to GPT-4 Turbo (20× cost): ≈ £242 instead of £12. Still <0.2% of total. Machine costs are not the constraint."
+      },
+      "manual_review_rate": {
+        "assumption": "£44/hr analyst rate (Standard scenario blended)",
+        "backing": "ITJobsWatch data shows UK contractor QA roles at £350–500/day; £44/hr ≈ £350/day. We bill 10% of flagged hours; client does 90% internally.",
+        "sensitivity": "If raised to £75/hr (premium London rate): £5,500 → £8,250 (+50%); still only 6% of ingestion. Not a primary cost driver."
+      }
+    },
+    "build_engineering": {
+      "total_days": 230,
+      "backing": "Work Breakdown Structure (WBS) cross-referenced to Cornerstone scope: ingestion orchestration (27 days) + cross-doc reasoning (38 days) + security/compliance (24 days) + DevOps (18 days) + QA testing (20 days) + PM (30 days) = 157 days core, + overheads/design/integration = 230 days.",
+      "resource_mix": "7 roles (SA, ML, BE, FE, DevOps, QA, PM) with blended rates (60% internal £300–£630/day, 40% contractor £350–£650/day).",
+      "cost": "£100,000 @ blended rates; £191,500 priced (100% markup = typical for hybrid vendor model).",
+      "justification": "Necessary to deliver: Siterra bulk/delta ingestion, cross-document linker, SSO/MFA, 12-month audit logs, DPIA/SSAQ, pen-test, UAT coordination, low-touch support setup."
+    },
+    "opex_baseline": {
+      "azure_search_s1": {
+        "assumption": "£200/month",
+        "backing": "TrustRadius: S1 @ $0.336/hr × 730 hrs = $245/mo ≈ £200. Suitable for 1,000 sites; can upgrade to S2/S3 if search volume exceeds S1 capacity.",
+        "scaling": "S2 = £1,003/mo (5× cost). S1 is entry-level; we start here, client can request upgrade if needed."
+      },
+      "app_hosting": {
+        "assumption": "£500/month",
+        "backing": "Typical Azure App Service (B2 or P1V2) for low-to-medium traffic (ingestion is async, Q&A is on-demand). Does not include CI/CD, backups, or incident response (covered in PM/support).",
+        "scaling": "Scales with replica count; baseline assumes 1–2 instances."
+      },
+      "monitoring_logging": {
+        "assumption": "£200/month",
+        "backing": "Log Analytics workspace + dashboards + alerts. Baseline storage ~1–2 GB/month for 1,000 sites (12-month retention = policy requirement).",
+        "scaling": "Logs grow ~1 GB/month; storage cost minimal; main cost is ingestion/analysis at that scale."
+      },
+      "support_hours": {
+        "assumption": "16 hrs/month baseline",
+        "backing": "Low-touch model: client owns data validation, we provide exceptions/guidance. 16 hrs = ~0.5 FTE analyst + PM overhead for escalations and planning.",
+        "upsell_tiers": [
+          { "tier": "Baseline", "hours": 16, "price_gbp": 1600, "sla": "Standard (48h response)" },
+          { "tier": "Enhanced", "hours": 40, "price_gbp": 4000, "sla": "On-call incident response" },
+          { "tier": "Premium", "hours": 120, "price_gbp": 12000, "sla": "Extended SLAs + change requests" }
+        ]
+      }
+    }
+  },
+
+  "margin_analysis": {
+    "standard_scenario": {
+      "achieved_gross_margin_pct": 43.8,
+      "target_gross_margin_pct": 60,
+      "variance_pct": -16.2,
+      "why_below_target": [
+        "1. Benchmark rates: Our hybrid model (60% internal, 40% contractor) uses market-aligned day rates. Room to optimize: use more internal staff (lower rates) or reduce build scope.",
+        "2. Amortization assumption: Build cost spread over 5,000 sites (aspirational). Actual deployment at 1,000 sites → higher per-site build cost. Fix: increase booking/commitment or raise base price.",
+        "3. Manual review floor: At 20 min/doc × 13% review fraction = 325 review hours. Only billing 10% = £5,500. Raising to 15% billed → +£825 (~+0.7% margin).",
+        "4. Support model: Baseline support (16 hrs/mo) may be too generous. Premium tiers cost more; client can opt up if they want more."
+      ],
+      "levers_to_improve_margin": [
+        { "lever": "Reduce review minutes/doc (20 → 15)", "impact_pct": "+4.2%", "effort": "High (requires tighter auto-linker, sampling QA)", "probability": "Medium (data dependent)" },
+        { "lever": "Increase manual review billed % (10% → 15%)", "impact_pct": "+0.7%", "effort": "Low (policy change)", "probability": "High" },
+        { "lever": "Raise quality mix (Poor -5pp, Good +5pp)", "impact_pct": "+2.1%", "effort": "High (upstream data quality)", "probability": "Low" },
+        { "lever": "Switch to Conservative scenario (+50% labor, +10% PT)", "impact_pct": "+12%", "effort": "Low (pricing choice)", "probability": "High (but lower price may lose deals)" }
+      ]
+    }
+  }
+}
