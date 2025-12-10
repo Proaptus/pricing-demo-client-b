@@ -114,9 +114,3 @@
 # The GCS bucket 'red-pegasus-pricing-data' is configured for public read access
 # for benchmark data and authenticated write access for exports.
 
-# Note: Deployment URL
-# ==============================
-# Red Pegasus deploys to its own obscured Netlify subdomain to prevent unauthorized access.
-# Production URL: https://pricingmod557733.netlify.app
-# This follows the same security pattern as Cornerstone (pricingmod552277)
-# ensuring the URL is not easily discoverable or guessable.
